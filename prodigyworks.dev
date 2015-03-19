@@ -1,0 +1,6 @@
+; ProdigyWorks configuration file
+DB_HOST = "localhost"
+DB_USER = "root"
+DB_PASSWORD = "root"
+DB_DATABASE = "swarovski"
+DB_PREFIX = "swarovski_"

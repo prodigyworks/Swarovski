@@ -1,0 +1,10 @@
+/* Page */
+.demo-container {padding: 20px 0;}
+.demo-container h4 {font-size: 14px; margin: 0 0 5px 0;}
+
+/* Mega Menu Styles */
+.mega-menu ul, .mega-menu ul li {list-style: none;}
+.mega-menu ul {position: relative; padding: 0; margin: 0;}
+.mega-menu ul li ul {display: none;}
+.mega-menu .sub {display: none;}
+.mega-menu .sub ul {display: block;}

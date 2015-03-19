@@ -1,0 +1,16 @@
+DONE - 1. The data to be cleaned up slightly - smelling pistakes etc
+DONE - [12:19:29] John Cove: in major categories
+DONE - [12:20:02] Kevin Hilton: I uploaded the data from the spreadsheet. I'll manually edit them.
+DONE - [12:20:25] John Cove: 2. Ability to create New Product Groups and add other groups to these groups.  For example:-
+DONE - [12:20:43] John Cove: Create, "BINOCULARS", and add all the different bonoculars groups to that one parent group
+DONE - [12:20:46] John Cove: (make sense?!)
+DONE - [12:21:25] Kevin Hilton: Yes. Ability to have nested product groups. Ok. Can make that change.
+DONE - [12:21:30] John Cove: Great! :)
+DONE - [12:21:44] John Cove: 3. Ability to loan out kit to customers and track it in a separate section
+DONE - [12:21:51] John Cove: this is detailed in the proposal
+DONE - [12:22:21] John Cove: 4. Reporting - ability to produce a PDF for each warehouse's stock, all warehouse stock, and which customer has what equipment
+DONE - Despatch report
+
+Product group drill down into stock.
+App for digital signature for checked out stock.
+Despatch available once signed.

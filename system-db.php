@@ -16,7 +16,7 @@ function start_db() {
 	}
 	
 	date_default_timezone_set('Europe/London'); 
-//	error_reporting(E_ALL ^ E_DEPRECATED);
+	error_reporting(0);
 
 	if (! isset($_SESSION['SYSTEMINI.INI'])) {
 		$_SESSION['SYSTEMINI.INI'] = parse_ini_file("systemini.ini");

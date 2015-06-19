@@ -161,7 +161,7 @@
 			}
 	    }
 	    
-        function initialisePageData() {
+        public static function initialisePageData() {
 			$qry = "SELECT DISTINCT A.* FROM {$_SESSION['DB_PREFIX']}pages A " .
 					"INNER JOIN {$_SESSION['DB_PREFIX']}pageroles B " .
 					"ON B.pageid = A.pageid " .

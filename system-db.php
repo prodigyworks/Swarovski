@@ -5,6 +5,7 @@ class SiteConfigClass {
 	public $loadextensionemail;
 	public $registrationemail;
 	public $signatureemail;
+	public $termsandconditions;
 	public $welcometext;
 	public $lastschedulerun;
 	public $runscheduledays;
@@ -62,6 +63,7 @@ function start_db() {
 					$data->loadextensionemail = $member['loadextensionemail'];
 					$data->registrationemail = $member['registrationemail'];
 					$data->signatureemail = $member['signatureemail'];
+					$data->termsandconditions = $member['termsandconditions'];
 					$data->welcometext = $member['welcometext'];
 					$data->lastschedulerun = $member['lastschedulerun'];
 					$data->runscheduledays = $member['runscheduledays'];

@@ -9,7 +9,7 @@ var fs = require('fs')
 
 var jshintrc = JSON.parse(fs.readFileSync('.jshintrc', 'utf8'))
   , sigPadPath = 'jquery.signaturepad.js'
-  , sigPadMinPath = 'build/jquery.signaturepad.min.js'
+  , sigPadMinPath = 'build/jquery.signaturepad.js'
   , source = fs.readFileSync(sigPadPath, 'utf8')
   , valid = jshint(source, jshintrc)
 

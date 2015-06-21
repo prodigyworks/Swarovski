@@ -42,31 +42,34 @@
 			if ($result) {
 				while (($member = mysql_fetch_assoc($result))) {
 					$this->addAddress( $member['customername'],
-					                  $member['address'], 90, 79);
+					                  $member['address'], 90, 79 - 15);
 					                  
 					                  
-					$this->addHeading(45, 60 , "CONTRACT FOR LOAN OF DEMONSTRATION STOCK");
-					$this->addLine(45, 70, "Our Reference");
-					$this->addLine(45, 74, $member['ourref']);
-					$this->addLine(130, 70, "Your Reference");
-					$this->addLine(130, 74, $member['yourref']);
-					$this->addHeading(45, 108 , "STOCK");
-					$this->addLine(45, 118, $member['stockname']);
-					$this->addHeading(120, 108 , "SERIAL NUMBER");
-					$this->addLine(120, 118, $member['serialnumber']);
-					$this->addAddress( "REASON FOR LOAN", $member['reason'], 90, 126);
-					$this->addHeading(90, 162, "TERMS OF LOAN");
-					$this->addLine(45, 170, "FROM  " . date("d/m/Y") . " UNTIL " . $member['expectedreturndate'] . " – you will receive an automatic reminder when");
-					$this->addLine(45, 174, "the product is due to be returned to us. If the loan relates to a repair, you have");
-					$this->addLine(45, 178, "this item until we advise you your own equipment is back from the factory.");
-					$this->addLine(45, 184, "BY ACCEPTING AND SIGNING THIS DOCUMENT YOU AGREE TO BE ");
-					$this->addLine(45, 188, "RESPONSIBLE FOR THE ITEM(S) THAT WILL BE SENT TO YOU ON LOAN");
-					$this->addHeading(45, 220, "DATE CONTRACT SIGNED");
-					$this->addHeading(120, 220, "SIGNATURE OF BORROWER");
-					$this->addLine(45, 230, $member['signeddate']);
+					$this->addHeading(45, 60 - 15 , "CONTRACT FOR LOAN OF DEMONSTRATION STOCK");
+					$this->addLine(45, 70 - 15, "Our Reference");
+					$this->addLine(45, 74 - 15, $member['ourref']);
+					$this->addLine(130, 70 - 15, "Your Reference");
+					$this->addLine(130, 74 - 15, $member['yourref']);
+					$this->addHeading(45, 108 - 15 , "STOCK");
+					$this->addLine(45, 118 - 15, $member['stockname']);
+					$this->addHeading(120, 108 - 15 , "SERIAL NUMBER");
+					$this->addLine(120, 118 - 15, $member['serialnumber']);
+					$this->addAddress( "REASON FOR LOAN", $member['reason'], 45, 126 - 15);
+					$this->addHeading(45, 162 - 0, "TERMS OF LOAN");
+					$this->addLine(45, 170 - 0, "FROM  " . date("d/m/Y") . " UNTIL " . $member['expectedreturndate'] . " – you will receive an automatic reminder when");
+					$this->addLine(45, 174 - 0, "the product is due to be returned to us. If the loan relates to a repair, you have");
+					$this->addLine(45, 178 - 0, "this item until we advise you your own equipment is back from the factory.");
+					$this->addLine(45, 184 - 0, "BY ACCEPTING AND SIGNING THIS DOCUMENT YOU AGREE TO BE ");
+					$this->addLine(45, 188 - 0, "RESPONSIBLE FOR THE ITEM(S) THAT WILL BE SENT TO YOU ON LOAN");
+					
+					$this->addAddress("", getSiteConfigData()->termsandconditions, 45, 190 - 0);
+					
+					$this->addHeading(45, 240 - 0, "DATE CONTRACT SIGNED");
+					$this->addHeading(120, 240 - 0, "SIGNATURE OF BORROWER");
+					$this->addLine(45, 250 - 0, $member['signeddate']);
 					
 					if ($member['imageid'] != null && $member['imageid'] != 0) {
-						$this->Image("uploads/signature_" . $member['imageid'] . ".png", 120, 225);
+						$this->Image("uploads/signature_" . $member['imageid'] . ".png", 120, 245 - 0);
 					}
 		 		}
 				

@@ -8,7 +8,8 @@
 		var $format;
 		var $angle=0;
 		
-
+		
+		
 		// public functions
 		function sizeOfText( $texte, $largeur )
 		{

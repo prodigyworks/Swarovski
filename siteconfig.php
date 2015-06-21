@@ -9,8 +9,9 @@
 		$welcometext = mysql_escape_string($_POST['welcometext']);
 		$emailfooter = mysql_escape_string($_POST['emailfooter']);
 		$registrationemail = mysql_escape_string($_POST['registrationemail']);
-		$loadextensionemail = mysql_escape_string($_POST['loadextensionemail']);
 		$signatureemail = mysql_escape_string(str_replace("\r\n", "", $_POST['signatureemail']));
+		$loadextensionemail = mysql_escape_string(str_replace("\r\n", "", $_POST['loadextensionemail']));
+		$termsandconditions = mysql_escape_string($_POST['termsandconditions']);
 		$runscheduledays = mysql_escape_string($_POST['runscheduledays']);
 		
 		$qry = "UPDATE {$_SESSION['DB_PREFIX']}siteconfig SET " .
@@ -18,6 +19,7 @@
 				"welcometext = '$welcometext', " .
 				"registrationemail = '$registrationemail', " .
 				"loadextensionemail = '$loadextensionemail', " .
+				"termsandconditions = '$termsandconditions', " .
 				"signatureemail = '$signatureemail', " .
 				"runscheduledays = '$runscheduledays', " .
 				"emailfooter = '$emailfooter'";
@@ -60,6 +62,9 @@
 	
 	<label>Loan Extension E-mail</label>
 	<textarea id="loadextensionemail" name="loadextensionemail" rows="15" cols="60" style="height:340px;width: 340px" class="tinyMCE"></textarea>
+	
+	<label>Terms & Conditions</label>
+	<textarea id="termsandconditions" name="termsandconditions" rows="15" cols="60" style="height:340px;width: 800px" ><?php echo $member['termsandconditions']; ?></textarea>
 	
 	<br>
 	<br>

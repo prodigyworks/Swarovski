@@ -133,7 +133,7 @@
 		// Add the login credentials to the signatureemail variable - JC 2014-01-10_15-55-55
 		
 		if ($extendloan == true) {
-			$signatureemail_jc = getSiteConfigData()->signatureemail . getSiteConfigData()->loadextensionemail . "<br /><br />Web address: http://optiks.inter-cloud.co.uk<br>Login : " . $theloginjc . "<br>Password : " . $thepasswordjc."<br><br>";
+			$signatureemail_jc = getSiteConfigData()->loadextensionemail . "<br /><br />Web address: http://optiks.inter-cloud.co.uk<br>Login : " . $theloginjc . "<br>Password : " . $thepasswordjc."<br><br>";
 			sendCustomerMessage($customerid, "Loan extension", $signatureemail_jc);
 				
 		} else {

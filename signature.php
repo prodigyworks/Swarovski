@@ -139,7 +139,7 @@
 	?>
 		  <link rel="stylesheet" href="build/jquery.signaturepad.css">
 		  <!--[if lt IE 9]><script src="build/flashcanvas.js"></script><![endif]-->
-		  <script src="build/jquery.signaturepad.min.js"></script>
+		  <script src="build/jquery.signaturepad.js"></script>
 		  <script src="build/json2.min.js"></script>
 			  <form method="post" action="" class="sigPad">
 			    <label for="name">Print your name</label>
@@ -157,8 +157,12 @@
 			      <input type="hidden" name="output" class="output">
 			      <input type="hidden" id="signatureid" name="signatureid">
 			    </div>
+			    <input type="checkbox" id="accept" name="accept">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript:showTandCs()">Accept terms & conditions</a></input>
 			    <button type="submit">I accept the terms of this agreement.</button>
 			  </form>
+			<div id="termsDialog" class="modal">
+				<?php echo str_replace("\n", "<br>", getSiteConfigData()->termsandconditions); ?>
+			</div>
 		<script>
 <?php
 			if (isset($_POST['output'])) {
@@ -174,10 +178,38 @@
 								}
 							}
 						});
+					
+					$("#termsDialog").dialog({
+							autoOpen: false,
+							modal: true,
+							title: "Terms and Conditions",
+							buttons: {
+								Ok: function() {
+									$(this).dialog("close");
+								}
+							}
+						});
 				});
 <?php
 			}
 ?>				
+			$(document).ready(function() {
+					
+					$("#termsDialog").dialog({
+							autoOpen: false,
+							modal: true,
+							title: "Terms and Conditions",
+							buttons: {
+								Ok: function() {
+									$(this).dialog("close");
+								}
+							}
+						});
+				});
+
+			function showTandCs() {
+				$("#termsDialog").dialog("open");
+			}
 		</script>
 <?php
 		if (isset($_POST['output'])) {
